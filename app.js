@@ -26,12 +26,6 @@ const chart = chartContainer.append('g');
 
 chart
 .append('g')
-.call(d3.axisTop(x).tickSizeOuter(0))
-.attr('transform', `translate(1, ${CHART_HEIGHT})`)
-.attr('color', '#4f009e');
-
-chart
-.append('g')
 .call(d3.axisBottom(x).tickSizeOuter(0))
 .attr('transform', `translate(0, ${CHART_HEIGHT})`)
 .attr('color', '#4f009e');
