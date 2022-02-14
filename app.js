@@ -1,6 +1,6 @@
 const DUMMY_DATA = [
     { id: 'd1', region: 'Gross Water Use for Pomona 2020', value: 21 },
-    { id: 'd2', region: 'Wastewater Collected for Pomon 2020', value: 11 },
+    { id: 'd2', region: 'Wastewater Collected in 2020', value: 11 },
     { id: 'd3', region: 'China', value: 11 },
     { id: 'd4', region: 'Germany', value: 6 },
 ];
