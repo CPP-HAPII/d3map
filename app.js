@@ -60,3 +60,5 @@ const listItems = d3
 .append('li');
 
 listItems.append('span').text(data => data.region)
+
+listItems.append('input').attr('type', 'checkbox').attr('checked', true);
