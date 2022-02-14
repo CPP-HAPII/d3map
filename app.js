@@ -1,13 +1,13 @@
 const DUMMY_DATA = [
     { id: 'd1', region: 'Wastewater Collected in 2020', value: 11 },
     { id: 'd2', region: 'Gross Water Use for Pomona 2020', value: 21 },
-    { id: 'd3', region: 'Recycled Water Average in Acre-Feet', value: 21 },
+    { id: 'd3', region: 'Recycled Water Average (Acre-Feet)', value: 21 },
     { id: 'd4', region: 'Normal Year Supply by 2025', value: 24 },
     { id: 'd5', region: 'Single Dry Year Supply by 2025', value: 25 },
 ];
 
 const MARGINS = {top: 20, bottom: 10};
-const CHART_WIDTH = 600;
+const CHART_WIDTH = 800;
 const CHART_HEIGHT = 400 - MARGINS.top - MARGINS.bottom;
 
 let selectedData = DUMMY_DATA;
