@@ -21,6 +21,8 @@ y.domain([0, d3.max(DUMMY_DATA, d => d.value) + 3]);
 
 const chart = chartContainer.append('g');
 
+chart.append('g').call(d3.axisBottom(x)).attr('color', '#4f009e');
+
 chart
 .selectAll('.bar')
 .data(DUMMY_DATA)
@@ -32,4 +34,13 @@ chart
 .attr('x', data => x(data.region))
 .attr('y', data => y(data.value));
 
-chart.selectAll('.label').data(DUMMY_DATA).enter().append('text').text((data) => data.value);
+chart
+.selectAll('.label')
+.data(DUMMY_DATA)
+.enter()
+.append('text')
+.text((data) => data.value)
+.attr('x', data => x(data.region) + x.bandwidth() / 2)
+.attr('y', data => y(data.value) - 20)
+.attr('text-anchor', 'middle')
+.classed('label', true);
