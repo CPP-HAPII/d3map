@@ -7,7 +7,7 @@ const DUMMY_DATA = [
 ];
 
 const MARGINS = {top: 20, bottom: 10};
-const CHART_WIDTH = 800;
+const CHART_WIDTH = 1000;
 const CHART_HEIGHT = 400 - MARGINS.top - MARGINS.bottom;
 
 let selectedData = DUMMY_DATA;
