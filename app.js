@@ -49,3 +49,14 @@ chart
 .attr('y', data => y(data.value) - 20)
 .attr('text-anchor', 'middle')
 .classed('label', true);
+
+
+const listItems = d3
+.select('#data')
+.select('ul')
+.selectAll('li')
+.data(DUMMY_DATA)
+.enter()
+.append('li');
+
+listItems.append('span').text(data => data.region)
