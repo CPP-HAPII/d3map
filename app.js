@@ -22,7 +22,10 @@ y.domain([0, d3.max(DUMMY_DATA, d => d.value) + 3]);
 
 const chart = chartContainer.append('g');
 
-chart.append('g').call(d3.axisBottom(x)).attr('transform', `translate(0, ${CHART_HEIGHT})`)
+chart
+.append('g')
+.call(d3.axisBottom(x).tickSizeOuter(0))
+.attr('transform', `translate(0, ${CHART_HEIGHT})`)
 .attr('color', '#4f009e');
 
 chart
