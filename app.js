@@ -1,9 +1,9 @@
 const DUMMY_DATA = [
     { id: 'd1', region: 'Wastewater Collected in 2020', value: 11 },
     { id: 'd2', region: 'Gross Water Use for Pomona 2020', value: 21 },
-    { id: 'd3', region: 'Recycled Water Average (Acre-Feet)', value: 21 },
-    { id: 'd4', region: 'Normal Year Supply by 2025', value: 24 },
-    { id: 'd5', region: 'Single Dry Year Supply by 2025', value: 25 },
+    { id: 'd3', region: 'Recycled Water Average in Pomona (Acre-Feet)', value: 21 },
+    { id: 'd4', region: 'Normal Year Supply by 2025 in Pomona', value: 24 },
+    { id: 'd5', region: 'Single Dry Year Supply by 2025 in Pomona', value: 25 },
 ];
 
 const MARGINS = {top: 20, bottom: 10};
