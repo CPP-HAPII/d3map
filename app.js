@@ -27,7 +27,7 @@ const chart = chartContainer.append('g');
 chart
 .append('g')
 .call(d3.axisTop(x))
-.attr('transform', `translate(10, 0)`)
+.attr('transform', `translate(10)`)
 .attr('color', '#4f009e');
 
 chart
