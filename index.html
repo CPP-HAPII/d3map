@@ -1,43 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale"></meta>
-    <title>CA Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale">
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+    <title>Test Map</title>
+
     <style>
-        path:hover {
-            fill: #468499;
-        }
+      path:hover {
+        fill: #468499;
+      }
+
     </style>
-    <script src="https://d3js.org/d3.v4.min.js" defer></script>
-    <script src="https://d3js.org/d3-geo-projection.v2.min.js" defer></script>
-</head>
-<body>
+  </head>
+
+  <body>
     <svg id="my_dataviz" width="1400" height="1000"></svg>
 
     <script>
-        var svg = d3.select("svg"),
+      var svg = d3.select("svg"),
         width = +svg.attr("width"),
         height = +svg.attr("height");
 
-    var path = d3.geoPath();
-    var projection = d3.geoMercator()
+      var path = d3.geoPath();
+      var projection = d3.geoMercator()
         .scale(2000)
         .center([-110, 35])
         .translate([width / 2, height / 2]);
 
-    d3.json("https://raw.githubuser.content.com/datadesk/california-topojson-atlas/master/build/counties/processed/state-level/06.json", function(data) {
+      d3.json("https://raw.githubusercontent.com/datadesk/california-topojson-atlas/master/build/counties/processed/state-level/06.json", function(data) {
 
         svg.append("g")
-        .selectAll("path")
-        .data(data.features)
-        .enter().append("path")
-        .attr("fill", "#bdcfdf")
-        .attr("d", d3.geoPath()
+          .selectAll("path")
+          .data(data.features)
+          .enter().append("path")
+          .attr("fill", "#bdcfdf")
+          .attr("d", d3.geoPath()
             .projection(projection)
-            )
-            .style("stroke", "#fff")
-    })
+          )
+          .style("stroke", "#fff")
+      })
+
     </script>
-</body>
+  </body>
+
 </html>
